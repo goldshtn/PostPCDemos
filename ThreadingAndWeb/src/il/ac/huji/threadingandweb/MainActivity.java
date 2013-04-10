@@ -21,9 +21,10 @@ public class MainActivity extends Activity {
 				TextView txtResult = (TextView)findViewById(R.id.txtResult);
 				
 				int maxPrime = Integer.parseInt(edtMaxPrime.getText().toString());
-				PrimeCounter counter = new PrimeCounter(2, maxPrime);
-				counter.count();
-				txtResult.setText(String.format("There are %d primes in the range.", counter.getResult()));
+//				PrimeCounter counter = new PrimeCounter(2, maxPrime);
+//				counter.count();
+//				txtResult.setText(String.format("There are %d primes in the range.", counter.getResult()));
+				new PrimeCounterAsyncTask(MainActivity.this, txtResult).execute(2, maxPrime);
 			}
 		});
 		

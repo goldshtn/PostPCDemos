@@ -10,7 +10,7 @@ public class PrimeCounter {
 		this.to = to;
 	}
 	
-	private static boolean isPrime(int number) {
+	public static boolean isPrime(int number) {
 		if (number % 2 == 0 && number != 2) return false;
 		int sqrt = (int)Math.sqrt(number);
 		for (int i = 3; i <= sqrt; i += 2) {
